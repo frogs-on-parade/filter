@@ -1,118 +1,210 @@
-﻿# Script edited with Filtration - https://github.com/ben-wallis/Filtration
 # Early game defined as levels 1 - 33 (Acts 1 - 3)
 # Mid game defined as levels 34 - 50 (Acts 4 - 6)
 # Late game defined as levels 51 - 67 (Acts 7 - 10)
 # End game defined as levels 68+ (Maps)
-# Yellow Diamond map icons represent currency
-# Triangle map icons represent possibly usable gear
-# Brown Triangle map icons represent special gear
-# White Triangle map icons represent craft-able gear
 
-# Section: League Gear
-
-# Splinters
+# Section: Leagues
+# Talisman League
 Show
-    Class "Stackable Currency"
-    BaseType "Splinter"
-    SetBorderColor 100 0 100
+    Class "Amulets"
+    BaseType "Talisman"
+    SetBorderColor 114 0 83
     SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
-
-Show
-    Class "Incubator"
-    SetBorderColor 100 0 100
-    SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
     PlayEffect Red
 
+# Perandus League
+Show
+    BaseType "Perandus Coin"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    AnyEnchantment True
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Prophecy League
+Show
+    BaseType "Silver Coin" "Eber's Key" "Inya's Key" "Volkuur's Key" "Yriel's Key"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    Class "Stackable Currency"
+    BaseType "Prophecy"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Essence League
+Show
+    Class "Stackable Currency"
+    BaseType "Essence"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Breach League
+Show
+    BaseType "Breach Ring" "Splinter of Xoph" "Splinter of Tul" "Splinter of Esh" "Splinter of Esh" "Splinter of Uul-Netol" "Splinter of Chayula" "Blessing of Xoph" "Blessing of Tul" "Blessing of Esh" "Blessing of Uul-Netol" "Blessing of Chayula" "Xoph's Breachstone" "Tul's Breachstone" "Esh's Breachstone" "Uul-Netol's Breachstone" "Chayula's Breachstone"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Abyss League
+Show
+    Class "Abyss Jewel"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    BaseType "Stygian Vise"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Incursion League
+Show
+    BaseType "Stone of Passage" "Flashpowder Keg" "Vial of Dominance" "Vial of Summoning" "Vial of Awakening" "Vial of the Ritual" "Vial of Fate" "Vial of Consequence" "Vial of Transcendence" "Vial of the Ghost" "Vial of Sacrifice"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Delve League
+Show
+    Class "Stackable Currency"
+    BaseType "Fossil" "Resonator"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    BaseType "Flare" "Delve" "Azurite"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Betrayal League
+Show
+    Class "Map Fragments"
+    BaseType "Scarab"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    HasExplicitMod "Veil"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    ShaperItem True
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    ElderItem True
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Synthesis League
+Show
+    SynthesisedItem True
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    FracturedItem True
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Legion League
+Show
+    Class "Incubator"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    Class "Stackable Currency"
+    BaseType "Timeless Eternal Empire Splinter" "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Templar Splinter" "Timeless Vaal Splinter"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    Class "Map Fragments"
+    BaseType "Timeless Eternal Emblem" "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+
+# Blight League
 Show
     Class "Stackable Currency"
     BaseType "Oil"
-    SetBorderColor 100 0 100
+    SetBorderColor 114 0 83
     SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
     PlayEffect Red
 
 # Section: Currency
-
-# Fragments Are Lower Class
-Hide
-    Class "Currency"
-    BaseType "Scroll Fragment" "Transmutation Shard" "Alteration Shard"
-    SetBackgroundColor 0 0 0 0
-    SetBorderColor 170 158 130
-    SetFontSize 12
-
-# Tier 0 Currency
-Hide
-    Class "Currency"
-    BaseType "Armourer's Scrap" "Blacksmith's Whetstone"
-    SetBorderColor 170 158 130
-    SetFontSize 26
-
 # Tier 1 Currency
-Hide
+Show
     Class "Currency"
-    BaseType "Scroll of Wisdom" "Portal Scroll"
+    BaseType "Alteration Shard" "Transmutation Shard" "Scroll Fragment"
     SetBorderColor 170 158 130
-    SetFontSize 29
+    SetFontSize 20
 
 # Tier 2 Currency
 Show
     Class "Currency"
-    BaseType "Orb of Transmutation" "Orb of Augmentation" "Orb of Alteration" "Jeweller's Orb" "Chromatic Orb" "Orb of Chance" "Chaos Shard" "Alchemy Shard"
+    BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Alchemy Shard" "Armourer's Scrap" "Portal Scroll" "Scroll of Wisdom"
     SetBorderColor 170 158 130
-    SetFontSize 35
+    SetFontSize 26
 
 # Tier 3 Currency
 Show
     Class "Currency"
-    BaseType "Orb of Scouring" "Orb of Regret" "Orb of Alchemy" "Orb of Horizons" "Glassblower's Bauble" "Cartographer's Chisel" "Chaos Orb" "Orb of Fusing" "Essence " "Remnant of " "Regal Shard" "Binding Shard" "Engineer's Shard" "Horizon Shard" "Annulment Shard" "Harbinger's Shard" "Ancient Shard" "Silver Coin" "Perandus Coin" "Engineer's Orb"
+    BaseType "Chromatic Orb" "Glassblower's Bauble" "Jeweller's Orb" "Orb of Alteration" "Orb of Chance" "Binding Shard" "Chaos Shard" "Engineer's Shard" "Horizon Shard" "Regal Shard"
     SetBorderColor 170 158 130
-    SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
 
 # Tier 4 Currency
 Show
     Class "Currency"
-    BaseType "Blessed Orb" "Vaal Orb" "Regal Orb" "Gemcutter's Prism" "Apprentice Cartographer's Sextant" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Splinter of " "Exalted Shard" "Stacked Deck"
+    BaseType "Ancient Shard" "Annulment Shard" "Apprentice Cartographer's Sextant" "Blessed Orb" "Chaos Orb" "Engineer's Orb" "Gemcutter's Prism" "Harbinger's Shard" "Stacked Deck" "Exalted Shard" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Bestiary Orb" "Cartographer's Chisel" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Vaal Orb"
     SetBorderColor 170 158 130
-    SetFontSize 41
-    PlayAlertSound 7 150
+    SetFontSize 38
+    PlayAlertSoundPositional 7 250
     MinimapIcon 1 Yellow Diamond
     PlayEffect Yellow
 
 # Tier 5 Currency
 Show
-    BaseType "Divine Orb" "Exalted Orb" "Mirror of Kalandra" "Stone of Passage"
+    Class "Currency"
+    BaseType "Ancient Orb" "Divine Orb" "Exalted Orb" "Harbinger's Orb" "Mirror of Kalandra" "Mirror Shard" "Orb of Annulment"
     SetBorderColor 170 158 130
-    SetFontSize 44
-    PlayAlertSound 7 300
+    SetFontSize 45
+    PlayAlertSoundPositional 7 300
     MinimapIcon 0 Yellow Diamond
     PlayEffect Yellow
 
 # Section: Vendor Recipes
-
 # 1 x Divine Orb
 Show
     LinkedSockets >= 6
     SetBorderColor 170 158 130
-    SetFontSize 44
-    PlayAlertSound 7 300
+    SetFontSize 45
+    PlayAlertSoundPositional 7 300
     MinimapIcon 0 Yellow Diamond
+    PlayEffect Yellow
 
 # 7 x Jeweller's Orb
 Show
     Sockets = 6
     SetBorderColor 170 158 130
-    SetFontSize 35
-    PlayAlertSound 7 25
-    MinimapIcon 2 Yellow Diamond
-    PlayEffect White
+    SetFontSize 38
+    PlayAlertSoundPositional 7 250
+    MinimapIcon 1 Yellow Diamond
+    PlayEffect Yellow
 
 # 1 x Chromatic Orb (Early Game)
 Show
@@ -121,7 +213,6 @@ Show
     Height <= 4
     ItemLevel <= 33
     SetBorderColor 170 158 130
-    SetFontSize 35
 
 # 1 x Chromatic Orb (Mid Game)
 Show
@@ -130,7 +221,6 @@ Show
     Height <= 3
     ItemLevel <= 50
     SetBorderColor 170 158 130
-    SetFontSize 35
 
 # 1 x Chromatic Orb (Late Game)
 Show
@@ -139,7 +229,6 @@ Show
     Height <= 2
     ItemLevel <= 67
     SetBorderColor 170 158 130
-    SetFontSize 35
 
 # 1 x Chromatic Orb (End Game)
 Hide
@@ -148,7 +237,6 @@ Hide
     Height <= 2
     ItemLevel >= 68
     SetBorderColor 170 158 130
-    SetFontSize 35
 
 # 1 x Cartographer's Chisel
 Show
@@ -156,10 +244,192 @@ Show
     BaseType "Stone Hammer" "Rock Breaker" "Gavel"
     SetBorderColor 170 158 130
     SetFontSize 38
-    PlayAlertSound 7 75
+    PlayAlertSoundPositional 7 250
     MinimapIcon 1 Yellow Diamond
+    PlayEffect Yellow
 
-# Section: Useful Equipment
+# Section: Useful Things
+# Unique Items
+Show
+    Rarity = Unique
+    SetBorderColor 175 96 37
+    PlayAlertSoundPositional 7 200
+    SetFontSize 36
+    MinimapIcon 0 Brown Square
+    PlayEffect Brown
+
+# Maps
+Show
+    Class "Maps" "Map Fragments"
+    SetBorderColor 200 200 200
+    PlayAlertSoundPositional 7 200
+    SetFontSize 45
+    MinimapIcon 0 White Square
+    PlayEffect White
+
+# Divination Cards
+Show
+    Class "Divination Card"
+    SetBorderColor 14 186 255
+    PlayAlertSoundPositional 7 200
+    SetFontSize 45
+    MinimapIcon 0 Blue Square
+    PlayEffect Blue
+
+# Identified Rare Items
+Show
+    Identified True
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+
+# Identified Magic Items
+Show
+    Identified True
+    Rarity Magic
+    SetBorderColor 136 136 255
+
+# Weapons
+Hide
+    Class "Sceptres" "One Hand Maces" "One Hand Swords" "Daggers" "Wands"
+    DropLevel >= 56
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Sceptres" "One Hand Maces" "One Hand Swords" "Daggers" "Wands"
+    DropLevel >= 56
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Two Hand Maces" "One Hand Axes" "Two Hand Swords"
+    DropLevel >= 57
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Two Hand Maces" "One Hand Axes" "Two Hand Swords"
+    DropLevel >= 57
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Two Hand Axes"
+    DropLevel >= 60
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Two Hand Axes"
+    DropLevel >= 60
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Thrusting One Hand Swords" "Bows" "Claws" "Rune Dagger" "Staves"
+    DropLevel >= 58
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Thrusting One Hand Swords" "Bows" "Claws" "Rune Dagger" "Staves"
+    DropLevel >= 58
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Warstaff"
+    DropLevel >= 55
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Warstaff"
+    DropLevel >= 55
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+
+# Armour
+Hide
+    Class "Body Armour"
+    DropLevel >= 60
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Body Armour"
+    DropLevel >= 60
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Boots"
+    DropLevel >= 53
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Boots"
+    DropLevel >= 53
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Gloves"
+    DropLevel >= 49
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Gloves"
+    DropLevel >= 49
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+Hide
+    Class "Helmets" "Shields"
+    DropLevel >= 55
+    ItemLevel >= 65
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Show
+    Class "Helmets" "Shields"
+    DropLevel >= 55
+    ItemLevel >= 65
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
+
+# Accessories
+Hide
+    Class "Amulets" "Belts" "Rings" "Quivers" "Jewel"
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 20
+Show
+    Class "Amulets" "Belts" "Rings" "Quivers" "Jewel"
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
 
 # Craft-able Gear (Early Game)
 Show
@@ -195,67 +465,6 @@ Show
     Rarity = Normal
     MinimapIcon 1 White Triangle
 
-# Elder Items
-Show
-    ElderItem True
-    SetFontSize 35
-    SetBorderColor 175 96 37
-    PlayAlertSound 7 300
-    MinimapIcon 0 Brown Triangle
-
-# Shaper Items
-Show
-    ShaperItem True
-    SetFontSize 35
-    SetBorderColor 175 96 37
-    PlayAlertSound 7 300
-    MinimapIcon 0 Brown Triangle
-
-# Fractured Items
-Show
-    FracturedItem True
-    SetFontSize 35
-    SetBorderColor 175 96 37
-    PlayAlertSound 7 300
-    MinimapIcon 0 Brown Triangle
-
-# Synthesized Items
-Show
-    SynthesisedItem True
-    SetFontSize 35
-    SetBorderColor 175 96 37
-    PlayAlertSound 7 300
-    MinimapIcon 0 Brown Triangle
-
-# Veiled Items
-Show
-    HasExplicitMod "Veil"
-    SetFontSize 35
-    SetBorderColor 175 96 37
-    PlayAlertSound 7 300
-    MinimapIcon 0 Brown Triangle
-
-# Maps
-Show
-    Class "Maps" "Map Fragments"
-    SetBorderColor 200 200 200
-    PlayAlertSound 7 75
-    MinimapIcon 1 White Square
-    PlayEffect White
-
-# Divination Cards
-Show
-    Class "Divination Card"
-    SetFontSize 41
-    PlayAlertSound 7 75
-    MinimapIcon 1 Blue Square
-    PlayEffect Blue
-
-# Talismans
-Show
-    BaseType "Talisman"
-    PlayAlertSound 7 75
-
 # Rare Corrupted Gear
 Show
     Corrupted True
@@ -271,169 +480,150 @@ Hide
     SetFontSize 26
     SetBorderColor 210 0 0
 
-# Unique Gear
-Show
-    Rarity = Unique
-    PlayAlertSound 7 75
-    MinimapIcon 1 Brown Triangle
-    PlayEffect Brown
-
-# Jewels
-Show
-    Class "Abyss Jewel" "Jewel"
-    MinimapIcon 1 Yellow Triangle
-
-# Rare Jewelery
-Show
-    Rarity >= Rare
-    Class "Rings" "Amulets" "Belts"
-    MinimapIcon 1 Yellow Triangle
-
-# Fossils
-Show
-    Class "Currency"
-    BaseType "Fossil"
-    SetBorderColor 170 158 130
-    SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
-
-# Resonators
-Show
-    Class "Currency"
-    BaseType "Resonator"
-    SetBorderColor 170 158 130
-    SetFontSize 38
-    PlayAlertSound 7 75
-    MinimapIcon 2 Yellow Diamond
-
 # Hide Act 10 Equipment
 Hide
-    ItemLevel >= 67
-    DropLevel <= 67
+    ItemLevel > 67
+    DropLevel <= 66
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 9 Equipment
 Hide
-    ItemLevel >= 64
-    DropLevel <= 64
+    ItemLevel > 64
+    DropLevel <= 62
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 8 Equipment
 Hide
-    ItemLevel >= 59
-    DropLevel <= 59
+    ItemLevel > 60
+    DropLevel <= 57
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 7 Equipment
 Hide
-    ItemLevel >= 54
-    DropLevel <= 54
+    ItemLevel > 54
+    DropLevel <= 52
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 6 Equipment
 Hide
-    ItemLevel >= 50
-    DropLevel <= 50
+    ItemLevel > 50
+    DropLevel <= 47
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 5 Equipment
 Hide
-    ItemLevel >= 45
-    DropLevel <= 43
+    ItemLevel > 45
+    DropLevel <= 42
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 4 Equipment
 Hide
-    ItemLevel >= 40
-    DropLevel <= 40
+    ItemLevel > 40
+    DropLevel <= 36
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 3 Equipment
 Hide
-    ItemLevel >= 33
-    DropLevel <= 33
+    ItemLevel > 32
+    DropLevel <= 27
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 2 Equipment
 Hide
-    ItemLevel >= 23
-    DropLevel <= 23
+    ItemLevel > 22
+    DropLevel <= 17
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hide Act 1 Equipment
 Hide
-    ItemLevel >= 13
-    DropLevel <= 13
+    ItemLevel > 12
+    DropLevel <= 6
     Rarity <= Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
+
+# Handle any equipment that isn't hidden to keep the asthetic of late game
+Show
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Rarity Normal
+    SetBorderColor 200 200 200
+    SetFontSize 26
+Hide
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Rarity Magic
+    SetBorderColor 136 136 255
+    SetFontSize 26
+Show
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Rarity Rare
+    SetBorderColor 255 255 119
+    SetFontSize 38
 
 # Section: Useful Skill Gems
-
 # Drop-Only Gems
 Show
     BaseType "Detonate Mines" "Empower" "Enhance" "Enlighten" "Portal"
     SetBorderColor 27 162 155
-    SetFontSize 44
-    MinimapIcon 0 Red Hexagon
+    SetFontSize 45
+    MinimapIcon 0 Green Hexagon
+    PlayEffect Green
 
 # Upper Class Gems
 Show
     Quality >= 20
     Class "Active Skill Gems" "Support Skill Gems"
     SetBorderColor 27 162 155
-    SetFontSize 44
-    MinimapIcon 1 Yellow Hexagon
+    SetFontSize 45
+    MinimapIcon 1 Green Hexagon
+    PlayEffect Green
 
 # Middle Class Gems
 Show
-    Quality >= 10
+    Quality >= 15
     Class "Active Skill Gems" "Support Skill Gems"
     SetBorderColor 27 162 155
-    SetFontSize 41
+    SetFontSize 38
     MinimapIcon 2 Green Hexagon
 
 # Section: Useful Flasks
-
 # Efficient Glassblower's Baubles
 Show
     Quality >= 20
@@ -458,146 +648,144 @@ Show
     SetFontSize 32
 
 # Section: Flask Cleanup
-
 # Hybrid Flasks are for Terrorists
 Hide
     Class "Hybrid Flasks"
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Small Flasks Suck
 Hide
-    ItemLevel >= 3
-    Rarity <= Magic
-    BaseType "Small Life Flask" "Small Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 1
+    ItemLevel >= 6
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Medium Flasks Suck
 Hide
-    ItemLevel >= 6
-    Rarity <= Magic
-    BaseType "Medium Life Flask" "Medium Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 3
+    ItemLevel >= 12
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Large Flasks Suck
 Hide
-    ItemLevel >= 12
-    Rarity <= Magic
-    BaseType "Large Life Flask" "Large Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 6
+    ItemLevel >= 18
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Greater Flasks Suck
 Hide
-    ItemLevel >= 18
-    Rarity <= Magic
-    BaseType "Greater Life Flask" "Greater Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 12
+    ItemLevel >= 24
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Grand Flasks Suck
 Hide
-    ItemLevel >= 24
-    Rarity <= Magic
-    BaseType "Grand Life Flask" "Grand Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 18
+    ItemLevel >= 30
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Giant Flasks Suck
 Hide
-    ItemLevel >= 30
-    Rarity <= Magic
-    BaseType "Giant Life Flask" "Giant Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 24
+    ItemLevel >= 36
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Colossal Flasks Suck
 Hide
-    ItemLevel >= 36
-    Rarity <= Magic
-    BaseType "Colossal Life Flask" "Colossal Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 30
+    ItemLevel >= 42
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Sacred Flasks Suck
 Hide
-    ItemLevel >= 42
-    Rarity <= Magic
-    BaseType "Sacred Life Flask" "Sacred Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 36
+    ItemLevel >= 50
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Hallowed Flasks Suck
 Hide
-    ItemLevel >= 50
-    Rarity <= Magic
-    BaseType "Hallowed Life Flask" "Hallowed Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 42
+    ItemLevel >= 60
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Sanctified Flasks Suck
 Hide
-    ItemLevel >= 60
-    Rarity <= Magic
-    BaseType "Sanctified Life Flask" "Sanctified Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 50
+    ItemLevel >= 65
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Divine Flasks Suck
 Hide
-    ItemLevel >= 65
-    Rarity <= Magic
-    BaseType "Divine Life Flask" "Divine Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 60
+    ItemLevel >= 68
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Yes, Even Eternal Flasks Can Suck
 Hide
-    ItemLevel >= 68
-    Rarity <= Magic
-    BaseType "Eternal Life Flask" "Eternal Mana Flask"
+    Class "Life Flasks" "Mana Flasks"
+    DropLevel 65
+    ItemLevel >= 72
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Section: Cleanup
-
 # Garbage Equipment
-Hide
-    Rarity < Rare
-    Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Wands" "Sceptres" "Bows" "Staves"
-    SetBackgroundColor 0 0 0 0
-    SetBorderColor 0 0 0 0
-    SetFontSize 12
+# Hide
+#     Rarity < Rare
+#     Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Rune Dagger" "Wands" "Sceptres" "Bows" "Staves" "Warstaff"
+#     SetBackgroundColor 0 0 0 0
+#     SetBorderColor 0 0 0 0
+#     SetFontSize 20
 
 # Garbage Accessories
 Hide
     Rarity < Rare
-    Class "Amulets" "Rings" "Belts" "Quivers"
+    Class "Amulets" "Belts" "Rings" "Quivers"
     SetBackgroundColor 0 0 0 0
-    SetBorderColor 170 158 130
-    SetFontSize 12
+    SetBorderColor 0 0 0 0
+    SetFontSize 20
 
 # Garbage Gems
 Hide
     Class "Active Skill Gems" "Support Skill Gems"
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
-    SetFontSize 12
+    SetFontSize 20
 
 # Catch All
 Show
