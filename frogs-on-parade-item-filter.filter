@@ -73,8 +73,13 @@ Show
 
 # Delve League
 Show
-    Class "Stackable Currency"
-    BaseType "Fossil" "Resonator"
+    Class "Currency"
+    BaseType "Fossil"
+    SetBorderColor 114 0 83
+    SetFontSize 38
+    PlayEffect Red
+Show
+    Class "Delve Stackable Socketable Currency"
     SetBorderColor 114 0 83
     SetFontSize 38
     PlayEffect Red
@@ -145,6 +150,13 @@ Show
     SetBorderColor 114 0 83
     SetFontSize 38
     PlayEffect Red
+Show
+    BlightedMap True
+    SetBorderColor 114 0 83
+    PlayAlertSoundPositional 7 200
+    SetFontSize 45
+    MinimapIcon 0 Red Square
+    PlayEffect Red
 
 # Section: Currency
 # Tier 1 Currency
@@ -152,14 +164,13 @@ Show
     Class "Currency"
     BaseType "Alteration Shard" "Transmutation Shard" "Scroll Fragment"
     SetBorderColor 170 158 130
-    SetFontSize 20
+    SetFontSize 26
 
 # Tier 2 Currency
 Show
     Class "Currency"
     BaseType "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Alchemy Shard" "Armourer's Scrap" "Portal Scroll" "Scroll of Wisdom"
     SetBorderColor 170 158 130
-    SetFontSize 26
 
 # Tier 3 Currency
 Show
@@ -170,7 +181,7 @@ Show
 # Tier 4 Currency
 Show
     Class "Currency"
-    BaseType "Ancient Shard" "Annulment Shard" "Apprentice Cartographer's Sextant" "Blessed Orb" "Chaos Orb" "Engineer's Orb" "Gemcutter's Prism" "Harbinger's Shard" "Stacked Deck" "Exalted Shard" "Journeyman Cartographer's Sextant" "Master Cartographer's Sextant" "Bestiary Orb" "Cartographer's Chisel" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Vaal Orb"
+    BaseType "Ancient Shard" "Annulment Shard" "Simple Sextant" "Blessed Orb" "Chaos Orb" "Engineer's Orb" "Gemcutter's Prism" "Harbinger's Shard" "Stacked Deck" "Exalted Shard" "Prime Sextant" "Awakened Sextant" "Bestiary Orb" "Cartographer's Chisel" "Orb of Alchemy" "Orb of Binding" "Orb of Fusing" "Orb of Horizons" "Orb of Regret" "Orb of Scouring" "Regal Orb" "Vaal Orb"
     SetBorderColor 170 158 130
     SetFontSize 38
     PlayAlertSoundPositional 7 250
@@ -281,6 +292,7 @@ Show
     Identified True
     Rarity Rare
     SetBorderColor 255 255 119
+    SetBackgroundColor 0 0 0 255
     SetFontSize 38
 
 # Identified Magic Items
@@ -288,6 +300,7 @@ Show
     Identified True
     Rarity Magic
     SetBorderColor 136 136 255
+    SetBackgroundColor 0 0 0 255
 
 # Weapons
 Hide
@@ -347,14 +360,14 @@ Show
     SetBorderColor 255 255 119
     SetFontSize 38
 Hide
-    Class "Warstaff"
+    Class "Warstaves"
     DropLevel >= 55
     ItemLevel >= 65
     Rarity Normal
     SetBorderColor 200 200 200
     SetFontSize 26
 Show
-    Class "Warstaff"
+    Class "Warstaves"
     DropLevel >= 55
     ItemLevel >= 65
     Rarity Rare
@@ -431,39 +444,39 @@ Show
     SetBorderColor 255 255 119
     SetFontSize 38
 
-# Craft-able Gear (Early Game)
-Show
-    LinkedSockets >= 3
-    ItemLevel <= 33
-    DropLevel <= 33
-    Rarity = Normal
-    MinimapIcon 1 White Triangle
+# Craftable Gear (Early Game)
+# Show
+#     LinkedSockets >= 3
+#     ItemLevel <= 33
+#     DropLevel <= 33
+#     Rarity = Normal
+#     MinimapIcon 1 White Triangle
 
-# Craft-able Gear (Mid Game)
-Show
-    LinkedSockets >= 4
-    ItemLevel <= 50
-    DropLevel > 33
-    DropLevel <= 50
-    Rarity = Normal
-    MinimapIcon 1 White Triangle
+# # Craftable Gear (Mid Game)
+# Show
+#     LinkedSockets >= 4
+#     ItemLevel <= 50
+#     DropLevel > 33
+#     DropLevel <= 50
+#     Rarity = Normal
+#     MinimapIcon 1 White Triangle
 
-# Craft-able Gear (Late Game)
-Show
-    LinkedSockets >= 4
-    ItemLevel <= 67
-    DropLevel > 50
-    DropLevel <= 67
-    Rarity = Normal
-    MinimapIcon 1 White Triangle
+# # Craftable Gear (Late Game)
+# Show
+#     LinkedSockets >= 4
+#     ItemLevel <= 67
+#     DropLevel > 50
+#     DropLevel <= 67
+#     Rarity = Normal
+#     MinimapIcon 1 White Triangle
 
-# Craft-able Gear (End Game)
-Show
-    LinkedSockets >= 4
-    ItemLevel >= 68
-    DropLevel >= 68
-    Rarity = Normal
-    MinimapIcon 1 White Triangle
+# # Craftable Gear (End Game)
+# Show
+#     LinkedSockets >= 4
+#     ItemLevel >= 68
+#     DropLevel >= 68
+#     Rarity = Normal
+#     MinimapIcon 1 White Triangle
 
 # Rare Corrupted Gear
 Show
@@ -485,7 +498,7 @@ Hide
     ItemLevel > 67
     DropLevel <= 66
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -495,7 +508,7 @@ Hide
     ItemLevel > 64
     DropLevel <= 62
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -505,7 +518,7 @@ Hide
     ItemLevel > 60
     DropLevel <= 57
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -515,7 +528,7 @@ Hide
     ItemLevel > 54
     DropLevel <= 52
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -525,7 +538,7 @@ Hide
     ItemLevel > 50
     DropLevel <= 47
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -535,7 +548,7 @@ Hide
     ItemLevel > 45
     DropLevel <= 42
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -545,7 +558,7 @@ Hide
     ItemLevel > 40
     DropLevel <= 36
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -555,7 +568,7 @@ Hide
     ItemLevel > 32
     DropLevel <= 27
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -565,7 +578,7 @@ Hide
     ItemLevel > 22
     DropLevel <= 17
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
@@ -575,24 +588,34 @@ Hide
     ItemLevel > 12
     DropLevel <= 6
     Rarity <= Rare
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     SetBackgroundColor 0 0 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 20
 
 # Handle any equipment that isn't hidden to keep the asthetic of late game
-Show
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+Hide
+    Class "Two Hand Maces" "Two Hand Axes" "Two Hand Swords" "Bows" "Staves" "Warstaves" "Body Armours" "Boots" "Gloves" "Helmets" 
+    Rarity Normal
+    LinkedSockets >= 4
+    SetBorderColor 200 200 200
+Hide
+    Class "Sceptres" "One Hand Maces" "One Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Claws" "Daggers" "Rune Dagger" "Wands" "Shields" 
+    Rarity Normal
+    LinkedSockets = 3
+    SetBorderColor 200 200 200
+Hide
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     Rarity Normal
     SetBorderColor 200 200 200
-    SetFontSize 26
+    SetFontSize 20
 Hide
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     Rarity Magic
     SetBorderColor 136 136 255
-    SetFontSize 26
+    SetFontSize 20
 Show
-    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaff" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
+    Class "Sceptres" "One Hand Maces" "Two Hand Maces" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "Bows" "Claws" "Daggers" "Rune Dagger" "Staves" "Warstaves" "Wands" "Body Armours" "Boots" "Gloves" "Helmets" "Shields" 
     Rarity Rare
     SetBorderColor 255 255 119
     SetFontSize 38
@@ -764,14 +787,6 @@ Hide
     SetFontSize 20
 
 # Section: Cleanup
-# Garbage Equipment
-# Hide
-#     Rarity < Rare
-#     Class "Body Armours" "Helmets" "Gloves" "Boots" "Shields" "One Hand Axes" "Two Hand Axes" "One Hand Swords" "Thrusting One Hand Swords" "Two Hand Swords" "One Hand Maces" "Two Hand Maces" "Claws" "Daggers" "Rune Dagger" "Wands" "Sceptres" "Bows" "Staves" "Warstaff"
-#     SetBackgroundColor 0 0 0 0
-#     SetBorderColor 0 0 0 0
-#     SetFontSize 20
-
 # Garbage Accessories
 Hide
     Rarity < Rare
