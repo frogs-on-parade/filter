@@ -1,0 +1,1367 @@
+# Half way down the document, you will find a large section that is commented out. That section allows you to emphasize specific gear based on "class".
+#
+# https://pathofexile.gamepedia.com/Item_filter
+# https://pathofexile.gamepedia.com/Item_filter_guide#Color_Options
+#
+# Early game defined as levels 1 - 33 (Acts 1 - 3)
+# Mid game defined as levels 34 - 50 (Acts 4 - 6)
+# Late game defined as levels 51 - 67 (Acts 7 - 10)
+# End game defined as levels 68+ (Maps)
+#
+# Act 01 ... Level 12
+# Act 02 ... Level 22
+# Act 03 ... Level 32
+# Act 04 ... Level 40
+# Act 05 ... Level 45
+# Act 06 ... Level 50
+# Act 07 ... Level 54
+# Act 08 ... Level 60
+# Act 09 ... Level 64
+# Act 10 ... Level 67
+#
+# Associations:
+#	Colors : Associated with item rarity
+#	Purple : Something out of the ordinary
+#	Circle : Maps
+#	Diamond : Currency
+#	Blue Square : Divination Card
+#	Raindrop : Potentially Usable Gear
+#	Cyan Hexagon : Skill gems
+#	Green Kite : Quest Item
+
+
+
+################################
+# Section: Basic Display Rules #
+################################
+Show # White border around normal items
+	Rarity Normal
+	SetBorderColor 200 200 200
+	SetFontSize 45
+Continue
+
+Show # Blue border around magic items
+	Rarity Magic
+	SetBorderColor 136 136 255
+	SetFontSize 45
+Continue
+
+Show # Yellow border around rare items
+	Rarity Rare
+	SetBorderColor 255 255 119
+	SetFontSize 45
+Continue
+
+Show # Add orange border, minimap icon, and effect to unique items
+	Rarity Unique
+	MinimapIcon 2 Orange Raindrop
+	PlayEffect Orange
+	SetBorderColor 175 96 37
+	SetFontSize 45
+Continue
+
+Show # Adjust badge for all currency
+	Class "Currency" "Stackable Currency"
+	SetBorderColor 170 158 130
+	SetFontSize 45
+Continue
+
+Show # Enlarge maps and map fragments
+	Class "Maps" "Map Fragments"
+	SetFontSize 45
+Continue
+
+Show # Add blue border, minimap icon, and effect to divination cards
+	Class "Divination Card"
+	MinimapIcon 2 Blue Square
+	PlayEffect Blue
+	SetBorderColor 14 186 255
+	SetFontSize 45
+Continue
+
+Show # Adjust badge for all skill gems
+	Class "Active Skill Gems" "Support Skill Gems"
+	SetBorderColor 27 162 155
+	SetFontSize 45
+Continue
+
+###############################################
+# Section: Emphasized Display Rules: Currency #
+###############################################
+Show # Deemphasize functional currency
+	BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Portal Scroll" "Scroll of Wisdom"
+	Class "Currency"
+	SetFontSize 38
+Continue
+
+Show # Emphasize functional currency
+	BaseType "Albino Rhoa Feather" "Awakened Sextant" "Awakener's Orb" "Bestiary Orb" "Blessed Orb" "Blessing of Chayula" "Blessing of Esh" "Blessing of Tul" "Blessing of Uul-Netol" "Blessing of Xoph" "Cartographer's Chisel" "Chaos Orb" "Crusader's Exalted Orb" "Divine Orb" "Exalted Orb" "Gemcutter's Prism" "Glassblower's Bauble" "Hunter's Exalted Orb" "Mirror of Kalandra" "Orb of Annulment" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Prime Sextant" "Redeemer's Exalted Orb" "Regal Orb" "Silver Coin" "Simple Sextant" "Stacked Deck" "Vaal Orb" "Warlord's Exalted Orb"
+	Class "Currency" "Stackable Currency"
+	MinimapIcon 1 Yellow Diamond
+	PlayEffect Yellow
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Deemphasize functional currency shards and fragments
+	BaseType "Alchemy Shard" "Alteration Shard" "Scroll Fragment" "Transmutation Shard"
+	Class "Stackable Currency"
+	SetFontSize 32
+Continue
+
+Show # Emphasize shards and fragments
+	BaseType "Splinter of Chayula" "Splinter of Esh" "Splinter of Tul" "Splinter of Uul-Netol" "Splinter of Xoph"
+	Class "Stackable Currency"
+	MinimapIcon 1 Yellow Diamond
+	PlayEffect Yellow
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize essences
+	BaseType "Essence" "Remnant of Corruption"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize prophecies
+	BaseType "Prophecy"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize incursion vials
+	BaseType "Vial"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize harbinger currency
+	BaseType "Ancient Orb" "Engineer's Orb" "Harbinger's Orb" "Orb of Binding"
+	Class "Currency"
+	MinimapIcon 1 Yellow Diamond
+	PlayEffect Yellow
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Deemphasize harbinger currency shards
+	BaseType "Ancient Shard" "Annulment Shard" "Binding Shard" "Chaos Shard" "Engineer's Shard" "Exalted Shard" "Harbinger's Shard" "Horizon Shard" "Mirror Shard" "Regal Shard"
+	Class "Stackable Currency"
+	SetFontSize 38
+Continue
+
+Show # Emphasize perandus coins
+	BaseType "Perandus Coin"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize resonators
+	Class "Delve Stackable Socketable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize fossils
+	BaseType "Fossil"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize oils
+	BaseType "Oil"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize catalysts
+	BaseType "Catalyst"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize legion splinters
+	BaseType "Timeless Eternal Empire Splinter" "Timeless Karui Splinter" "Timeless Maraketh Splinter" "Timeless Templar Splinter"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize delirium orbs and splinters
+	BaseType "Delirium Orb" "Simulacrum Splinter"
+	Class "Stackable Currency"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Hide # Stop showing these currencies when mapping
+	AreaLevel >= 68
+	BaseType "Alchemy Shard" "Alteration Shard" "Scroll Fragment" "Transmutation Shard" "Armourer's Scrap" "Blacksmith's Whetstone" "Portal Scroll" "Scroll of Wisdom"
+	Class "Currency" "Stackable Currency"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+
+Show # Render currency
+	Class "Currency" "Stackable Currency"
+
+###########################################
+# Section: Emphasized Display Rules: Maps #
+###########################################
+Show # Common styling
+	Class "Maps"
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize normal maps
+	Class "Maps"
+	MinimapIcon 2 White Circle
+	PlayEffect White
+	Rarity Normal
+	SetBackgroundColor 200 200 200
+Continue
+
+Show # Emphasize magic maps
+	Class "Maps"
+	MinimapIcon 1 Blue Circle
+	PlayEffect Blue
+	Rarity Magic
+	SetBackgroundColor 136 136 255
+Continue
+
+Show # Emphasize rare maps
+	Class "Maps"
+	MinimapIcon 0 Yellow Circle
+	PlayEffect Yellow
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+Continue
+
+Show # Emphasize unique maps
+	Class "Maps"
+	MinimapIcon 0 Orange Circle
+	PlayEffect Orange
+	Rarity Unique
+	SetBackgroundColor 175 96 37
+Continue
+
+Show # Emphasize blighted maps
+	BlightedMap True
+	MinimapIcon 0 Purple Circle
+	PlayEffect Purple
+Continue
+
+Show # Render maps
+	Class "Maps"
+
+####################################################
+# Section: Emphasized Display Rules: Map Fragments #
+####################################################
+Show # Common styling
+	Class "Map Fragments" "Pantheon Soul"
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize all normal map fragments
+	Class "Map Fragments" "Pantheon Soul"
+	MinimapIcon 2 White Circle
+	PlayEffect White
+	Rarity Normal
+	SetBackgroundColor 200 200 200
+Continue
+
+Show # Emphasize all magic map fragments
+	Class "Map Fragments" "Pantheon Soul"
+	MinimapIcon 1 Blue Circle
+	PlayEffect Blue
+	Rarity Magic
+	SetBackgroundColor 136 136 255
+Continue
+
+Show # Emphasize all rare map fragments
+	Class "Map Fragments" "Pantheon Soul"
+	MinimapIcon 0 Yellow Circle
+	PlayEffect Yellow
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+Continue
+
+Show # Emphasize all unique map fragments
+	Class "Map Fragments" "Pantheon Soul"
+	MinimapIcon 0 Orange Circle
+	PlayEffect Orange
+	Rarity Unique
+	SetBackgroundColor 175 96 37
+Continue
+
+Show # Emphasize breachstones
+	BaseType "Chayula's Breachstone" "Esh's Breachstone" "Tul's Breachstone" "Uul-Netol's Breachstone" "Xoph's Breachstone"
+	Class "Map Fragments"
+	MinimapIcon 0 Purple Circle
+	PlayEffect Purple
+Continue
+
+Show # Emphasize emblems
+	BaseType "Timeless Eternal Emblem" "Timeless Karui Emblem" "Timeless Maraketh Emblem" "Timeless Templar Emblem" "Timeless Vaal Emblem"
+	Class "Map Fragments"
+	MinimapIcon 0 Purple Circle
+	PlayEffect Purple
+Continue
+
+Show # Emphasize scarabs
+	BaseType "Scarab"
+	Class "Map Fragments"
+	MinimapIcon 0 Purple Circle
+	PlayEffect Purple
+Continue
+
+Show # Render map fragments
+	Class "Map Fragments" "Pantheon Soul"
+
+#################################################
+# Section: Emphasized Display Rules: Skill Gems #
+#################################################
+Show # Emphasize drop only gems
+	BaseType "Empower Support" "Enhance Support" "Enlighten Support" "Portal"
+	Class "Active Skill Gems" "Support Skill Gems"
+	MinimapIcon 0 Cyan Hexagon
+	PlayEffect Cyan
+	SetBackgroundColor 27 162 155
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize high quality gems
+	Class "Active Skill Gems" "Support Skill Gems"
+	MinimapIcon 1 Cyan Hexagon
+	PlayEffect Cyan
+	Quality >= 20
+	SetBackgroundColor 27 162 155
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize vaal gems
+	Class "Active Skill Gems" "Support Skill Gems"
+	Corrupted True
+	SetFontSize 38
+
+Hide # All other gems are only shown on the first map of the campaign
+	AreaLevel > 1
+	Class "Active Skill Gems" "Support Skill Gems"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	SetFontSize 26
+
+#############################################
+# Section: Emphasized Display Rules: Jewels #
+#############################################
+Show # Common styling
+	Class "Abyss Jewel" "Jewel"
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize normal jewels
+	Class "Abyss Jewel" "Jewel"
+	MinimapIcon 1 White Raindrop
+	PlayEffect White
+	Rarity Normal
+	SetBackgroundColor 200 200 200
+Continue
+
+Show # Emphasize magic jewels
+	Class "Abyss Jewel" "Jewel"
+	MinimapIcon 1 Blue Raindrop
+	PlayEffect Blue
+	Rarity Magic
+	SetBackgroundColor 136 136 255
+Continue
+
+Show # Emphasize rare jewels
+	Class "Abyss Jewel" "Jewel"
+	MinimapIcon 1 Yellow Raindrop
+	PlayEffect Yellow
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+Continue
+
+Show # Emphasize unique jewels
+	Class "Abyss Jewel" "Jewel"
+	MinimapIcon 1 Orange Raindrop
+	PlayEffect Orange
+	Rarity Unique
+	SetBackgroundColor 175 96 37
+Continue
+
+Show # Render cluster jewels
+	BaseType "Cluster Jewel"
+	Class "Jewel"
+
+Hide # Render normal and magic jewels
+	Class "Abyss Jewel" "Jewel"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetFontSize 26
+
+Show # Render rare and unique jewels
+	Class "Abyss Jewel" "Jewel"
+	Rarity > Magic
+
+##################################################
+# Section: Emphasized Display Rules: Accessories #
+##################################################
+Show # Common styling
+	Class "Amulets" "Belts" "Rings"
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+Continue
+
+Show # Emphasize normal accessories
+	Class "Amulets" "Belts" "Rings"
+	MinimapIcon 1 White Raindrop
+	PlayEffect White
+	Rarity Normal
+	SetBackgroundColor 200 200 200
+Continue
+
+Show # Emphasize magic accessories
+	Class "Amulets" "Belts" "Rings"
+	MinimapIcon 1 Blue Raindrop
+	PlayEffect Blue
+	Rarity Magic
+	SetBackgroundColor 136 136 255
+Continue
+
+Show # Emphasize rare accessories
+	Class "Amulets" "Belts" "Rings"
+	MinimapIcon 1 Yellow Raindrop
+	PlayEffect Yellow
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+Continue
+
+Show # Emphasize unique accessories
+	Class "Amulets" "Belts" "Rings"
+	MinimapIcon 1 Orange Raindrop
+	PlayEffect Orange
+	Rarity Unique
+	SetBackgroundColor 175 96 37
+Continue
+
+Hide # Render normal and magic accessories
+	Class "Amulets" "Belts" "Rings"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetFontSize 26
+
+Show # Render rare and unique accessories
+	Class "Amulets" "Belts" "Rings"
+	Rarity > Magic
+
+#############################################
+# Section: Emphasized Display Rules: Flasks #
+#############################################
+Show # Common styling
+	Class "Hybrid Flasks" "Life Flasks" "Mana Flasks" "Utility Flasks"
+	SetFontSize 38
+Continue
+
+Show # Emphasize unique flasks
+	Class "Hybrid Flasks" "Life Flasks" "Mana Flasks" "Utility Flasks"
+	Rarity Unique
+	SetBackgroundColor 175 96 37
+	SetBorderColor 0 0 0
+	SetFontSize 45
+	SetTextColor 0 0 0
+Continue
+
+Hide # Deemphasize hybrid flasks
+	Class "Hybrid Flasks"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 9
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 1
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 15
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 3
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 21
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 6
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 27
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 12
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 33
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 18
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 39
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 24
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 46
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 30
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 55
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 36
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 62
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 42
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 68
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 50
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 71
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 60
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 74
+	Class "Life Flasks" "Mana Flasks"
+	DisableDropSound True
+	DropLevel 65
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Show # Render flasks
+	Class "Hybrid Flasks" "Life Flasks" "Mana Flasks"
+
+############################################
+# Section: Emphasized Display Rules: Other #
+############################################
+Show # Quest Items
+	Class "Incubator" "Incursion Item" "Labyrinth Item" "Labyrinth Trinket"
+	MinimapIcon 1 Purple Diamond
+	PlayEffect Purple
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Quest Items
+	Class "Quest Items"
+	MinimapIcon 1 Green Kite
+	PlayEffect Green
+	SetBackgroundColor 74 230 58
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+###########################################################
+# Section: Emphasized Display Rules: Class Specific Items #
+###########################################################
+#Show # Emphasize strength body armor
+#	BaseType "Plate Vest" "Chestplate" "Copper Plate" "War Plate" "Full Plate" "Arena Plate" "Lordly Plate" "Bronze Plate" "Battle Plate" "Sun Plate" "Colosseum Plate" "Majestic Plate" "Golden Plate" "Crusader Plate" "Astral Plate" "Gladiator Plate" "Glorious Plate"
+#	Class "Body Armour"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength boots
+#	BaseType "Iron Greaves" "Steel Greaves" "Plated Greaves" "Reinforced Greaves" "Antique Greaves" "Ancient Greaves" "Goliath Greaves" "Vaal Greaves" "Titan Greaves"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength gloves
+#	BaseType "Iron Gauntlets" "Plated Gauntlets" "Bronze Gauntlets" "Steel Gauntlets" "Antique Gauntlets" "Ancient Gauntlets" "Goliath Gauntlets" "Vaal Gauntlets" "Titan Gauntlets" "Spiked Gloves"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength helmets
+#	BaseType "Iron Hat" "Cone Helmet" "Barbute Helmet" "Close Helmet" "Gladiator Helmet" "Reaver Helmet" "Siege Helmet" "Samite Helmet" "Ezomyte Burgonet" "Royal Burgonet" "Eternal Burgonet"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength shields
+#	BaseType "Tower Shield"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Emphasize dexterity body armor
+#	BaseType "Shabby Jerkin" "Strapped Leather" "Buckskin Tunic" "Wild Leather" "Full Leather" "Sun Leather" "Thief's Garb" "Eelskin Tunic" "Frontier Leather" "Glorious Leather" "Coronal Leather" "Cutthroat's Garb" "Sharkskin Tunic" "Destiny Leather" "Exquisite Leather" "Zodiac Leather" "Assassin's Garb"
+#	Class "Body Armour"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity boots
+#	BaseType "Rawhide Boots" "Goathide Boots" "Deerskin Boots" "Nubuck Boots" "Eelskin Boots" "Sharkskin Boots" "Shagreen Boots" "Stealth Boots" "Slink Boots"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity gloves
+#	BaseType "Rawhide Gloves" "Goathide Gloves" "Deerskin Gloves" "Nubuck Gloves" "Eelskin Gloves" "Sharkskin Gloves" "Shagreen Gloves" "Stealth Gloves" "Gripped Gloves" "Slink Gloves"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity helmets
+#	BaseType "Leather Cap" "Tricorne" "Leather Hood" "Wolf Pelt" "Hunter Hood" "Noble Tricorne" "Ursine Pelt" "Silken Hood" "Sinner Tricorne" "Lion Pelt"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity shields
+#	BaseType "Buckler"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Emphasize intelligence body armor
+#	BaseType "Simple Robe" "Silken Vest" "Scholar's Robe" "Silken Garb" "Mage's Vestment" "Silk Robe" "Cabalist Regalia" "Sage's Robe" "Silken Wrap" "Conjurer's Vestment" "Spidersilk Robe" "Destroyer Regalia" "Savant's Robe" "Necromancer Silks" "Occultist's Vestment" "Widowsilk Robe" "Vaal Regalia"
+#	Class "Body Armour"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize intelligence boots
+#	BaseType "Wool Shoes" "Velvet Slippers" "Silk Slippers" "Scholar Boots" "Satin Slippers" "Samite Slippers" "Conjurer Boots" "Arcanist Slippers" "Sorcerer Boots"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize intelligence gloves
+#	BaseType "Wool Gloves" "Velvet Gloves" "Silk Gloves" "Embroidered Gloves" "Satin Gloves" "Samite Gloves" "Conjurer Gloves" "Arcanist Gloves" "Sorcerer Gloves" "Fingerless Silk Gloves"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize intelligence helmets
+#	BaseType "Vine Circlet" "Iron Circlet" "Torture Cage" "Tribal Circlet" "Bone Circlet" "Lunaris Circlet" "Steel Circlet" "Necromancer Circlet" "Solaris Circlet" "Mind Cage" "Hubris Circlet"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize intelligence shields
+#	BaseType "Spirit Shield"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Emphasize strength/dexterity body armor
+#	BaseType "Scale Vest" "Light Brigandine" "Scale Doublet" "Infantry Brigandine" "Full Scale Armour" "Soldier's Brigandine" "Field Lamellar" "Wyrmscale Doublet" "Hussar Brigandine" "Full Wyrmscale" "Commander's Brigandine" "Battle Lamellar" "Dragonscale Doublet" "Desert Brigandine" "Full Dragonscale" "General's Brigandine" "Triumphant Lamellar"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/dexterity boots
+#	BaseType "Leatherscale Boots" "Ironscale Boots" "Bronzescale Boots" "Steelscale Boots" "Serpentscale Boots" "Wyrmscale Boots" "Hydrascale Boots" "Dragonscale Boots" "Two-Toned Boots"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/dexterity gloves
+#	BaseType "Fishscale Gauntlets" "Ironscale Gauntlets" "Bronzescale Gauntlets" "Steelscale Gauntlets" "Serpentscale Gauntlets" "Wyrmscale Gauntlets" "Hydrascale Gauntlets" "Dragonscale Gauntlets"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/dexterity helmets
+#	BaseType "Battered Helm" "Sallet" "Visored Sallet" "Gilded Sallet" "Secutor Helm" "Fencer Helm" "Lacquered Helmet" "Fluted Bascinet" "Pig-Faced Bascinet" "Nightmare Bascinet"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/dexterity shields
+#	BaseType "Round Shield"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Emphasize strength/intelligence body armor
+#	BaseType "Chainmail Vest" "Chainmail Tunic" "Ringmail Coat" "Chainmail Doublet" "Full Ringmail" "Full Chainmail" "Holy Chainmail" "Latticed Ringmail" "Crusader Chainmail" "Ornate Ringmail" "Chain Hauberk" "Devout Chainmail" "Loricated Ringmail" "Conquest Chainmail" "Elegant Ringmail" "Saint's Hauberk" "Saintly Chainmail"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/intelligence boots
+#	BaseType "Chain Boots" "Ringmail Boots" "Mesh Boots" "Riveted Boots" "Zealot Boots" "Soldier Boots" "Legion Boots" "Crusader Boots" "Two-Toned Boots"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/intelligence gloves
+#	BaseType "Chain Gloves" "Ringmail Gloves" "Mesh Gloves" "Riveted Gloves" "Zealot Gloves" "Soldier Gloves" "Legion Gloves" "Crusader Gloves"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/intelligence helmets
+#	BaseType "Rusted Coif" "Soldier Helmet" "Great Helmet" "Crusader Helmet" "Aventail Helmet" "Zealot Helmet" "Great Crown" "Magistrate Crown" "Prophet Crown" "Praetor Crown" "Bone Helmet"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize strength/intelligence shields
+#	BaseType "Kite Shield"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Emphasize dexterity/intelligence body armor
+#	BaseType "Padded Vest" "Oiled Vest" "Padded Jacket" "Oiled Coat" "Scarlet Raiment" "Waxed Garb" "Bone Armour" "Quilted Jacket" "Sleek Coat" "Crimson Raiment" "Lacquered Garb" "Crypt Armour" "Sentinel Jacket" "Varnished Coat" "Blood Raiment" "Sadist Garb" "Carnal Armour"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity/intelligence boots
+#	BaseType "Wrapped Boots" "Strapped Boots" "Clasped Boots" "Shackled Boots" "Trapper Boots" "Ambush Boots" "Carnal Boots" "Assassin's Boots" "Murder Boots" "Two-Toned Boots"
+#	Class "Boots"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity/intelligence gloves
+#	BaseType "Mitts"
+#	Class "Gloves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity/intelligence helmets
+#	BaseType "Mask"
+#	Class "Helmets"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+#Show # Emphasize dexterity/intelligence shields
+#	BaseType "Spiked Bundle" "Spiked Shield"
+#	Class "Shields"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+
+
+#Show # Sceptres
+#	Class "Sceptres"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # One Handed Maces
+#	Class "One Hand Mace"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Two Handed Maces
+#	Class "Two Hand Mace"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # One Handed Axes
+#	Class "One Hand Axe"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Two Handed Axes
+#	Class "Two Hand Axe"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # One Handed Swords
+#	Class "One Hand Sword"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+# Thrusting One Hand Swords
+#Show
+#	Class "Thrusting One Hand Sword"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+# Two Handed Swords
+#Show
+#	Class "Two Hand Sword"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Bows & Arrows
+#	Class "Bow" "Quiver"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Claws
+#	Class "Claw"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Daggers
+#	Class "Dagger" "Rune Dagger"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Staves & Warstaves
+#	Class "Staves" "Warstaves"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#Show # Wands 
+#	Class "Wand"
+#	MinimapIcon 1 Yellow Raindrop
+#	PlayEffect Yellow
+#	Rarity Rare
+#	SetBackgroundColor 255 255 119
+#	SetBorderColor 0 0 0
+#	SetTextColor 0 0 0
+#Continue
+
+#####################################################
+# Section: Emphasized Display Rules: Vendor Recipes #
+#####################################################
+Show # 1 x Divine Orb
+	LinkedSockets >= 6
+
+Show # 7 x Jeweller's Orbs
+	MinimapIcon 1 Yellow Diamond
+	PlayEffect Yellow
+	SetBackgroundColor 170 158 130
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+	Sockets = 6
+
+Show # Identified Rares
+	Identified True
+	MinimapIcon 1 Yellow Diamond
+	PlayEffect Yellow
+	Rarity Rare
+
+#####################################################
+# Section: Emphasized Display Rules: End Game Items #
+#####################################################
+Show
+	Class "Sceptres" "One Hand Maces" "One Hand Swords" "Daggers" "Wands"
+	DropLevel >= 56
+	Rarity Rare
+Show
+	Class "Two Hand Maces" "One Hand Axes" "Two Hand Swords"
+	DropLevel >= 57
+	Rarity Rare
+Show
+	Class "Two Hand Axes"
+	DropLevel >= 60
+	Rarity Rare
+Show
+	Class "Thrusting One Hand Swords" "Bows" "Claws" "Rune Dagger" "Staves"
+	DropLevel >= 58
+	Rarity Rare
+Show
+	Class "Warstaves"
+	DropLevel >= 55
+	Rarity Rare
+
+Show
+	Class "Body Armour"
+	DropLevel >= 60
+	Rarity Rare
+Show
+	Class "Boots"
+	DropLevel >= 53
+	Rarity Rare
+Show
+	Class "Gloves"
+	DropLevel >= 49
+	Rarity Rare
+Show
+	Class "Helmets" "Shields"
+	DropLevel >= 55
+	Rarity Rare
+
+Show
+	Class "Quivers"
+	Rarity Rare
+
+###########################
+# Section: Hide Old Items #
+###########################
+Hide
+	AreaLevel >= 22
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 12
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 32
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 22
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 40
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 32
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 45
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 40
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 50
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 45
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 54
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 50
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 60
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 54
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 64
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 60
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Hide
+	AreaLevel >= 67
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	DropLevel <= 64
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Rare
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+########################################
+# Section: Hide Normal and Magic Items #
+########################################
+Hide
+	Class "Body Armours" "Boots" "Bows" "Claws" "Daggers" "Gloves" "Helmets" "Jewel" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Quivers" "Rune Daggers" "Sceptres" "Shields" "Staves" "Thrusting One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Wands" "Warstaves"
+	DisableDropSound True
+	MinimapIcon -1
+	PlayAlertSound None
+	PlayEffect None
+	Rarity <= Magic
+	SetBackgroundColor 0 0 0 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 18
+
+Show # Render everything
