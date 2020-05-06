@@ -95,7 +95,7 @@ Show # Deemphasize functional currency
 Continue
 
 Show # Emphasize functional currency
-	BaseType "Albino Rhoa Feather" "Awakened Sextant" "Awakener's Orb" "Bestiary Orb" "Blessed Orb" "Blessing of Chayula" "Blessing of Esh" "Blessing of Tul" "Blessing of Uul-Netol" "Blessing of Xoph" "Cartographer's Chisel" "Chaos Orb" "Crusader's Exalted Orb" "Divine Orb" "Exalted Orb" "Gemcutter's Prism" "Glassblower's Bauble" "Hunter's Exalted Orb" "Mirror of Kalandra" "Orb of Annulment" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Prime Sextant" "Redeemer's Exalted Orb" "Regal Orb" "Silver Coin" "Simple Sextant" "Stacked Deck" "Vaal Orb" "Warlord's Exalted Orb"
+	BaseType "Albino Rhoa Feather" "Awakened Sextant" "Awakener's Orb" "Bestiary Orb" "Blessed Orb" "Blessing of Chayula" "Blessing of Esh" "Blessing of Tul" "Blessing of Uul-Netol" "Blessing of Xoph" "Cartographer's Chisel" "Chaos Orb" "Crusader's Exalted Orb" "Divine Orb" "Exalted Orb" "Gemcutter's Prism" "Glassblower's Bauble" "Hunter's Exalted Orb" "Mirror of Kalandra" "Orb of Alchemy" "Orb of Annulment" "Orb of Fusing" "Orb of Regret" "Orb of Scouring" "Prime Sextant" "Redeemer's Exalted Orb" "Regal Orb" "Silver Coin" "Simple Sextant" "Stacked Deck" "Vaal Orb" "Warlord's Exalted Orb"
 	Class "Currency" "Stackable Currency"
 	MinimapIcon 1 Yellow Diamond
 	PlayEffect Yellow
@@ -151,7 +151,7 @@ Show # Emphasize incursion vials
 Continue
 
 Show # Emphasize harbinger currency
-	BaseType "Ancient Orb" "Engineer's Orb" "Harbinger's Orb" "Orb of Binding"
+	BaseType "Ancient Orb" "Engineer's Orb" "Harbinger's Orb" "Orb of Binding" "Orb of Horizons"
 	Class "Currency"
 	MinimapIcon 1 Yellow Diamond
 	PlayEffect Yellow
@@ -699,7 +699,7 @@ Show # Render flasks
 ############################################
 # Section: Emphasized Display Rules: Other #
 ############################################
-Show # Quest Items
+Show # Random odds and ends
 	Class "Incubator" "Incursion Item" "Labyrinth Item" "Labyrinth Trinket"
 	MinimapIcon 1 Purple Diamond
 	PlayEffect Purple
@@ -712,6 +712,51 @@ Show # Quest Items
 	MinimapIcon 1 Green Kite
 	PlayEffect Green
 	SetBackgroundColor 74 230 58
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize corrupted items
+	Corrupted True
+	MinimapIcon 1 Purple Raindrop
+	PlayEffect Purple
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize influenced items
+	HasInfluence "Shaper" "Elder" "Crusader" "Hunter" "Redeemer" "Warlord"
+	MinimapIcon 1 Purple Raindrop
+	PlayEffect Purple
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize fractured items
+	FracturedItem True
+	MinimapIcon 1 Purple Raindrop
+	PlayEffect Purple
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize synthesized items
+	SynthesisedItem True
+	MinimapIcon 1 Purple Raindrop
+	PlayEffect Purple
+	Rarity Rare
+	SetBackgroundColor 255 255 119
+	SetBorderColor 0 0 0
+	SetTextColor 0 0 0
+
+Show # Emphasize veiled items
+	HasExplicitMod "Veil"
+	MinimapIcon 1 Purple Raindrop
+	PlayEffect Purple
+	Rarity Rare
+	SetBackgroundColor 255 255 119
 	SetBorderColor 0 0 0
 	SetTextColor 0 0 0
 
